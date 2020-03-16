@@ -1,0 +1,56 @@
+version: '3'
+services:
+  # Elasticsearch用のコンテナ
+  es:
+    build: ./es
+    container_name: elasticsearch
+    environment:
+      - cluster.name=rails-sample-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - es_sample_data:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+  # Kibana用のコンテナ
+  kibana:
+    image: docker.elastic.co/kibana/kibana:6.5.4
+    environment:
+      SERVER_NAME: localhost:5601
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+    ports:
+      - 5601:5601
+    depends_on:
+      - es
+  # MYSQL用のコンテナ
+  db:
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    build: ./mysql
+    ports:
+      - "3306:3306"
+  # Rails用のコンテナ
+  api:
+    build: ./api
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    # 必要であればshなどに bundle install や rails s を実行してrailsを起動する処理を書く
+    # command: scripts/start-server.sh
+    volumes:
+      - ./api:/prototype_task_nuxt/api
+    ports:
+      - "8080:3000"
+    links:
+      - db
+      - es
+    tty: true
+    stdin_open: true
+
+volumes:
+  es_sample_data:
+    driver: local
+  vendor_bundle:
+    driver: local
