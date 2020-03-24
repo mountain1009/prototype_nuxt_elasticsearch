@@ -9,9 +9,13 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "start-storybook -p 9001"
   },
   "dependencies": {
+    "@nuxtjs/auth": "^4.9.0",
+    "@nuxtjs/axios": "^5.9.5",
+    "@storybook/vue": "^5.3.17",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
