@@ -11,6 +11,8 @@
 # hlsearch on (H) or off (h):
 ~h
 # Command Line History (newest to oldest):
+:q
+|2,0,1584418223,,"q"
 :wq
 |2,0,1584091175,,"wq"
 
@@ -28,16 +30,28 @@
 |3,1,36,0,1,0,1584091164,"g"
 
 # File marks:
-'0  7  0  ~/Gemfile
-|4,48,7,0,1584091175,"~/Gemfile"
+'0  1  0  ~/app/controllers/api/v1/users/tasks_controller.rb
+|4,48,1,0,1584418223,"~/app/controllers/api/v1/users/tasks_controller.rb"
+'1  7  0  ~/Gemfile
+|4,49,7,0,1584091175,"~/Gemfile"
 
 # Jumplist (newest first):
+-'  1  0  ~/app/controllers/api/v1/users/tasks_controller.rb
+|4,39,1,0,1584418223,"~/app/controllers/api/v1/users/tasks_controller.rb"
+-'  7  0  ~/Gemfile
+|4,39,7,0,1584091175,"~/Gemfile"
 -'  7  0  ~/Gemfile
 |4,39,7,0,1584091175,"~/Gemfile"
 -'  1  0  ~/Gemfile
 |4,39,1,0,1584091160,"~/Gemfile"
+-'  1  0  ~/Gemfile
+|4,39,1,0,1584091160,"~/Gemfile"
 
 # History of marks within files (newest to oldest):
+
+> ~/app/controllers/api/v1/users/tasks_controller.rb
+	*	1584418223	0
+	"	1	0
 
 > ~/Gemfile
 	*	1584091173	0
