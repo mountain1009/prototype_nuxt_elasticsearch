@@ -15,14 +15,23 @@
   "dependencies": {
     "@nuxtjs/auth": "^4.9.0",
     "@nuxtjs/axios": "^5.9.5",
-    "@storybook/vue": "^5.3.17",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.0.0",
+    "@storybook/addon-actions": "^5.3.17",
+    "@storybook/addon-knobs": "^5.3.17",
+    "@storybook/addon-links": "^5.3.17",
+    "@storybook/addon-notes": "^5.3.17",
+    "@storybook/addon-viewport": "^5.3.17",
+    "@storybook/addons": "^5.3.17",
+    "@storybook/vue": "^5.3.17",
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-jest": "^24.1.0",
+    "babel-preset-vue": "^2.0.2",
+    "core-js": "2.6.9",
     "jest": "^24.1.0",
+    "storybook-addon-vue-info": "^1.4.2",
     "vue-jest": "^4.0.0-0"
   }
 }

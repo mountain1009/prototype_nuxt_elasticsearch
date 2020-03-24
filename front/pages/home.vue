@@ -24,8 +24,8 @@
 </template>
 
 <script>
-  import Board from '@/components/Board'
-  import TaskEditDialog from "@/components/TadkEditDialog";
+  import Board from '@/components/atoms/boards/Board'
+  import TaskEditDialog from "@/components/atoms/dialogs/TadkEditDialog";
   import {mapActions} from 'vuex'
 
   export default {

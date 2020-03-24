@@ -24,7 +24,7 @@
 </template>
 
 <script>
-  import TadkEditDialog from "@/components/TadkEditDialog";
+  import TadkEditDialog from "@/components/atoms/dialogs/TadkEditDialog";
   export default {
     props: {
       status_name: {

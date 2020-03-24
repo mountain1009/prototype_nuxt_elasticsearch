@@ -9,7 +9,7 @@
 </template>
 
 <script>
-  import Tasks from "@/components/Tasks";
+  import Tasks from "@/components/molecules/tasks/Tasks";
   export default {
     components:{
       Tasks
